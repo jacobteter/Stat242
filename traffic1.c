@@ -78,3 +78,13 @@ moveCol(int * map, int c, int row, int col){
   }
 }  
 
+void move(int * map, int time, int row, int col){
+  int t,r,c;
+  for(t=0; t<time; t++)
+    if (t%2==0)
+      for(r=0; r<row; r++)
+        moveRow(map,r,row,col);      
+    else
+      for(c=0; c<col; c++)
+  	moveCol(map,c,row,col);
+}   
