@@ -8,7 +8,7 @@ int fullRow(int *map, int, int, int);
 int fullCol(int *map, int, int, int);
 void moveRow(int *map, int, int, int);
 void moveCol(int *map, int, int, int);
-void printMap(int * map);
+void move(int * map, int, int, int);
   
 int fullRow(int * map, int r, int row, int col){ /*returns 1 if all cells on row r have cars*/
   int c;
