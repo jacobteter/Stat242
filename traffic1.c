@@ -78,13 +78,3 @@ moveCol(int * map, int c, int row, int col){
   }
 }  
 
-
-void 
-printMap(int * map){ // for testing & debugging purposes
-  int r,c;
-  for(r=0; r<row; r++){
-    for(c=0; c<col; c++)
-      printf("%d", map[r][c]);
-    printf("\n");
-  }  
-}
