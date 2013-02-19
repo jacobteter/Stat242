@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "Move.h"
+//#include "Move.h"
+#include <R.h>
 
 #define BLUE 1 // ones move up
 #define RED 2 // twos move right
@@ -11,6 +12,7 @@ int fullCol(int *map, int c, int row, int col);
 void moveRow(int *map, int r, int row, int col);
 void moveCol(int *map, int c, int row, int col);
 void move(int *map, int *time, int *row, int *col);
+
   
 int fullRow(int *map, int r, int row, int col){ /*returns 1 if all cells on row r have cars*/
   int c;
@@ -69,8 +71,8 @@ moveCol(int * map, int c, int row, int col){
       while(*(map+col*rr+c)==BLUE)
         rr=(rr+1)%row;
     if(*(map+col*rr+c)==0){ /*cars from r to rr can move*/
-      *(map+col*r+c)=0;
-      *(map+col*rr+c)=BLUE;
+                              *(map+col*r+c)=0;
+                            *(map+col*rr+c)=BLUE;
     }
     /* else cars from r to rr are blocked*/
       r=rr;
